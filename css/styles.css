@@ -5,13 +5,16 @@
   --address-map: #ffffff;
   --benefits-job-team-title-name: #212121;
   --benefits-team-text: #757575;
+  --text-color-btn-hover-focus: #ffffff;
+  --header-logo: #000000;
+  --footer-logo: #ffffff;
 }
 
 /* 1)-----PORTFOLIO------- */
 
 body {
   font-family: "Roboto", sans-serif;
-  color: #212121;
+  color: var(--link-btn-title-color);
 }
 
 .list {
@@ -29,6 +32,20 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--hover-focus-color);
+}
+
+.header-logo {
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--header-logo);
+}
+
+.footer-logo {
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--footer-logo);
 }
 
 .btn {
@@ -76,8 +93,12 @@ body {
   color: var(--hover-focus-color);
 }
 
-/* Hero buttons */
-.hero-list {
+.header-list .link.current {
+  color: var(--hover-focus-color);
+}
+
+/* Hero */
+.hero-item {
   font-family: "Roboto", inherit;
   font-weight: 500;
   font-size: 16px;
@@ -89,7 +110,8 @@ body {
 
 .hero-button:hover,
 .hero-button:focus {
-  color: var(--hover-focus-color);
+  background-color: var(--hover-focus-color);
+  color: var(--text-color-btn-hover-focus);
 }
 
 /* ABOUT */
@@ -114,17 +136,29 @@ body {
 }
 
 .address-map {
+  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--address-map);
 }
 
+.address-map:hover,
+.address-map:focus {
+  color: var(--hover-focus-color);
+}
+
 .address-link {
+  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.address-link:hover,
+.address-link:focus {
+  color: var(--hover-focus-color);
 }
 
 /* 2)-------INDEX.HTML-------*/
@@ -140,7 +174,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--text-color-btn-hover-focus);
 }
 
 .section-btn {
@@ -150,7 +184,8 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
+  color: var(--text-color-btn-hover-focus);
+  background-color: var(--hover-focus-color);
 }
 
 /* BENEFITS */
